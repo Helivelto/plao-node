@@ -1,5 +1,5 @@
 module.exports = (application) => {
     application.get('/usuarios', (req, res) => {
-        res.render('usuarios/usuarios')
+        application.app.controllers.usuarios.usuarios(application, req, res)
     })
 }
