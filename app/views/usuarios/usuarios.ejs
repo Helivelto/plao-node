@@ -4,41 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listagem de usuarios</title>
+
+    <!-- JQuery -->
+    <script src="js/jquery-2.2.1.js"></script>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- incluindo css -->
+    <link href="css/style_user.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+ 
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
 </head>
 <body>
 
-    <table border="1px">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-        <% for(let i = 0; i < usuarios.length; i++){ %>
-        
-            <% if(usuarios[i].tipo_usuario == 'escritor'){ %>
-                <tr>
-                    <td><%= usuarios[i].nome_usuario %></td>
-                    <td><%= usuarios[i].email_usuario %></td>
-                    <td><%= usuarios[i].tipo_usuario %></td>
-                </tr>
-            <% } %>
+                <img src="images/logo.png" />
+            </div>
 
-        <% } %>
-    </table>
 
-    <br>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">HOME</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <table border="1px">
 
-        <% for(let i = 0; i < usuarios.length; i++){ %>
+    
+    <div id="container">
 
-            <% if(usuarios[i].tipo_usuario == 'leitor'){ %>
-                <tr>
-                    <td><%= usuarios[i].nome_usuario %></td>
-                    <td><%= usuarios[i].email_usuario %></td>
-                    <td><%= usuarios[i].tipo_usuario %></td>
-                </tr>
-            <% } %>
 
-        <% } %>
-    </table>
+        <section id="tipo_escritor">
 
+            <table border="1px">
+
+                <% for(let i = 0; i < usuarios.length; i++){ %>
+                
+                    <% if(usuarios[i].tipo_usuario == 'escritor'){ %>
+                        <tr>
+                            <td><%= usuarios[i].nome_usuario %></td>
+                            <td><%= usuarios[i].email_usuario %></td>
+                            <td><%= usuarios[i].tipo_usuario %></td>
+                        </tr>
+                    <% } %>
+
+                <% } %>
+
+            </table>
+
+        </section>
+        <br>
+
+
+        <section id="tipo_leitor">
+
+            <table border="1px">
+
+                <% for(let i = 0; i < usuarios.length; i++){ %>
+
+                    <% if(usuarios[i].tipo_usuario == 'leitor'){ %>
+                        <tr>
+                            <td><%= usuarios[i].nome_usuario %></td>
+                            <td><%= usuarios[i].email_usuario %></td>
+                            <td><%= usuarios[i].tipo_usuario %></td>
+                        </tr>
+                    <% } %>
+
+                <% } %>
+
+            </table>
+
+        </section>
+    </div>
 </body>
 </html>
