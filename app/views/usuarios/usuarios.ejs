@@ -7,17 +7,38 @@
     <title>Document</title>
 </head>
 <body>
+
     <table border="1px">
 
         <% for(let i = 0; i < usuarios.length; i++){ %>
-            <% if(usuarios[i].tipo_usuario == 'escritor'){%>
-            <tr>
-                <td><%= usuarios[i].nome_usuario %></td>
-                <td><%= usuarios[i].email_usuario %></td>
-                <td><%= usuarios[i].tipo_usuario %></td>
-            </tr>
+        
+            <% if(usuarios[i].tipo_usuario == 'escritor'){ %>
+                <tr>
+                    <td><%= usuarios[i].nome_usuario %></td>
+                    <td><%= usuarios[i].email_usuario %></td>
+                    <td><%= usuarios[i].tipo_usuario %></td>
+                </tr>
             <% } %>
+
         <% } %>
     </table>
+
+    <br>
+
+    <table border="1px">
+
+        <% for(let i = 0; i < usuarios.length; i++){ %>
+
+            <% if(usuarios[i].tipo_usuario == 'leitor'){ %>
+                <tr>
+                    <td><%= usuarios[i].nome_usuario %></td>
+                    <td><%= usuarios[i].email_usuario %></td>
+                    <td><%= usuarios[i].tipo_usuario %></td>
+                </tr>
+            <% } %>
+
+        <% } %>
+    </table>
+
 </body>
 </html>
