@@ -1,0 +1,13 @@
+#select_tipo{
+    display: flex;
+}
+#select_tipo h3{
+    background-color: #fff;
+    margin: auto;
+    width: 30vw;
+    text-align: center;
+}
+
+#tipo_escritor{
+    display: none;
+}
