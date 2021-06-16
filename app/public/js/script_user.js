@@ -7,9 +7,18 @@ let usuarios_leitores = document.querySelector('#tipo_leitor')
 display_escritor.addEventListener('click', function(){
     usuarios_escritores.style.display = 'block'
     usuarios_leitores.style.display = 'none'
+    
+    display_escritor.classList.add('green')
+    display_leitor.classList.remove('green')
+    display_leitor.classList.add('black')
 })
 
 display_leitor.addEventListener('click', function(){
     usuarios_escritores.style.display = 'none'
     usuarios_leitores.style.display = 'block'
+
+    display_leitor.classList.add('green')
+    display_escritor.classList.add('black')
+    display_escritor.classList.remove('green')
+    
 })

@@ -53,10 +53,10 @@
     <div id="container">
 
         <div id="select_tipo">
-            <h3 id="h3_leitor">Usuarios leitores</h3>
+            <h3 id="h3_leitor" class="green">Usuarios leitores</h3>
             <h3 id="h3_escritor">Usuarios Escritores</h3>
         </div>
-
+        <div id="teste">
 
         <section id="tipo_escritor">
 
@@ -68,13 +68,13 @@
                             <span> <span class="specific">Email: </span><%= usuarios[i].email_usuario %></span>
                             <span> <span class="specific">Senha: </span><%= usuarios[i].senha_usuario %></span>
                         </div>
-                        <br>
+                        <!-- <br> -->
                     <% } %>
 
                 <% } %>
 
         </section>
-        <br>
+        <!-- <br> -->
 
 
         <section id="tipo_leitor">
@@ -87,13 +87,13 @@
                             <span> <span class="specific">Email: </span><%= usuarios[i].email_usuario %></span>
                             <span> <span class="specific">Senha: </span><%= usuarios[i].senha_usuario %></span>
                         </div>
-                        <br>
+                        <!-- <br> -->
                     <% } %>
 
                 <% } %>
 
         </section>
-        
+    </div>
     </div>
     <script src="js/script_user.js"></script>
 </body>

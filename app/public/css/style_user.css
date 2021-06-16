@@ -13,6 +13,9 @@
     display: none;
     margin-top: 5vh;
 }
+#tipo_leitor{
+    margin-top: 5vh;
+}
 .div_usuario{
     width: 80vw;
     display: flex;
@@ -33,6 +36,13 @@
     color: #7f8c8d;
 }
 
-#tipo_leitor{
-    margin-top: 5vh;
+.green{
+    color: #27ae60;
+}
+.black{
+    color: black;
+}
+
+#teste{
+    top: 0;
 }
