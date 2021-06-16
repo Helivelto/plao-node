@@ -9,9 +9,12 @@
     text-align: center;
     margin-top: 3vh;
 }
+#select_tipo h3:hover{
+    color: black;
+}
 
 .border_red{
-    border-bottom: 1px solid #e74c3c;
+    border-bottom: 2px solid #e74c3c;
     transition: 1s;
 }
 .non_border{
@@ -23,7 +26,7 @@
 }
 .black{
     transition: .5s;
-    color: black;
+    color: #7f8c8d;
 }
 
 #tipo_escritor{
@@ -51,10 +54,4 @@
 }
 .specific{
     color: #7f8c8d;
-}
-
-
-
-#teste{
-    top: 0;
 }

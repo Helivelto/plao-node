@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,18 +12,19 @@
 
     <!-- bootstrap - link cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- incluindo css -->
     <link href="css/style_user.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
- 
+
 
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
 
 </head>
+
 <body>
 
     <nav class="navbar navbar-default navbar-static-top">
@@ -53,48 +55,87 @@
     <div id="container">
 
         <div id="select_tipo">
-            <h3 id="h3_leitor" class="green border_red" >Usuarios leitores</h3>
+            <h3 id="h3_leitor" class="green border_red">Usuarios leitores</h3>
             <h3 id="h3_escritor" class="black non_border">Usuarios Escritores</h3>
         </div>
-        <div id="teste">
 
         <section id="tipo_escritor">
 
-                <% for(let i = 0; i < usuarios.length; i++){ %>
-                
-                    <% if(usuarios[i].tipo_usuario == 'escritor'){ %>
-                        <div class="div_usuario">
-                            <span> <span class="specific">Nome de usuario: </span><%= usuarios[i].nome_usuario %></span>
-                            <span> <span class="specific">Email: </span><%= usuarios[i].email_usuario %></span>
-                            <span> <span class="specific">Senha: </span><%= usuarios[i].senha_usuario %></span>
-                        </div>
-                        <!-- <br> -->
-                    <% } %>
+            <% for(let i=0; i < usuarios.length; i++){ %>
 
+                
+                <% if(usuarios[i].tipo_usuario=='escritor' ){ %>
+                    <div class="div_usuario">
+                        <span> 
+                            <span class="specific">Id: #</span>
+                            <%= usuarios[i].id_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Nome de usuario: </span>
+                            <%= usuarios[i].nome_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Email: </span>
+                            <%= usuarios[i].email_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Senha: </span>
+                            <%= usuarios[i].senha_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Código de status: </span>
+                            <%= usuarios[i].cod_status_usuario.toUpperCase() %>
+                        </span>
+                    </div>
                 <% } %>
 
+
+            <% } %>
+
         </section>
-        <!-- <br> -->
 
 
         <section id="tipo_leitor">
 
-                <% for(let i = 0; i < usuarios.length; i++){ %>
+            <% for(let i=0; i < usuarios.length; i++){ %>
 
-                    <% if(usuarios[i].tipo_usuario == 'leitor'){ %>
-                        <div class="div_usuario">
-                            <span> <span class="specific">Nome de usuario: </span><%= usuarios[i].nome_usuario %></span>
-                            <span> <span class="specific">Email: </span><%= usuarios[i].email_usuario %></span>
-                            <span> <span class="specific">Senha: </span><%= usuarios[i].senha_usuario %></span>
-                        </div>
-                        <!-- <br> -->
-                    <% } %>
+
+                <% if(usuarios[i].tipo_usuario=='leitor' ){ %>
+                    <div class="div_usuario">
+                        <span> 
+                            <span class="specific">Id: #</span>
+                            <%= usuarios[i].id_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Nome de usuario: </span>
+                            <%= usuarios[i].nome_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Email: </span>
+                            <%= usuarios[i].email_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Senha: </span>
+                            <%= usuarios[i].senha_usuario %>
+                        </span>
+                        <span> 
+                            <span class="specific">Código de status: </span>
+                            <%= usuarios[i].cod_status_usuario.toUpperCase() %>
+                        </span>
+                    </div>
 
                 <% } %>
 
+
+            <% } %>
+
         </section>
+
     </div>
-    </div>
+
+    <!-- Scripts -->
     <script src="js/script_user.js"></script>
+
 </body>
+
 </html>
