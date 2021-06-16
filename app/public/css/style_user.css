@@ -6,8 +6,33 @@
     margin: auto;
     width: 30vw;
     text-align: center;
+    margin-top: 3vh;
 }
 
 #tipo_escritor{
     display: none;
+    margin-top: 5vh;
+}
+.div_usuario{
+    width: 80vw;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+    background-color: #FFF;
+	padding:15px;
+	margin-bottom:15px;
+	box-shadow: 1px 1px 2px #C3C3C3;
+}
+.div_usuario span{
+    margin: auto;
+}
+.specific{
+    color: #7f8c8d;
+}
+
+#tipo_leitor{
+    margin-top: 5vh;
 }

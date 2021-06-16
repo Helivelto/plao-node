@@ -60,21 +60,18 @@
 
         <section id="tipo_escritor">
 
-            <table border="1px">
-
                 <% for(let i = 0; i < usuarios.length; i++){ %>
                 
                     <% if(usuarios[i].tipo_usuario == 'escritor'){ %>
-                        <tr>
-                            <td><%= usuarios[i].nome_usuario %></td>
-                            <td><%= usuarios[i].email_usuario %></td>
-                            <td><%= usuarios[i].tipo_usuario %></td>
-                        </tr>
+                        <div class="div_usuario">
+                            <span> <span class="specific">Nome de usuario: </span><%= usuarios[i].nome_usuario %></span>
+                            <span> <span class="specific">Email: </span><%= usuarios[i].email_usuario %></span>
+                            <span> <span class="specific">Senha: </span><%= usuarios[i].senha_usuario %></span>
+                        </div>
+                        <br>
                     <% } %>
 
                 <% } %>
-
-            </table>
 
         </section>
         <br>
@@ -82,23 +79,21 @@
 
         <section id="tipo_leitor">
 
-            <table border="1px">
-
                 <% for(let i = 0; i < usuarios.length; i++){ %>
 
                     <% if(usuarios[i].tipo_usuario == 'leitor'){ %>
-                        <tr>
-                            <td><%= usuarios[i].nome_usuario %></td>
-                            <td><%= usuarios[i].email_usuario %></td>
-                            <td><%= usuarios[i].tipo_usuario %></td>
-                        </tr>
+                        <div class="div_usuario">
+                            <span> <span class="specific">Nome de usuario: </span><%= usuarios[i].nome_usuario %></span>
+                            <span> <span class="specific">Email: </span><%= usuarios[i].email_usuario %></span>
+                            <span> <span class="specific">Senha: </span><%= usuarios[i].senha_usuario %></span>
+                        </div>
+                        <br>
                     <% } %>
 
                 <% } %>
 
-            </table>
-
         </section>
+        
     </div>
     <script src="js/script_user.js"></script>
 </body>
