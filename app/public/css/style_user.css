@@ -1,5 +1,6 @@
 #select_tipo{
     display: flex;
+    
 }
 #select_tipo h3{
     background-color: #fff;
@@ -7,6 +8,22 @@
     width: 30vw;
     text-align: center;
     margin-top: 3vh;
+}
+
+.border_red{
+    border-bottom: 1px solid #e74c3c;
+    transition: 1s;
+}
+.non_border{
+    border: none;
+}
+.green{
+    transition: .5s;
+    color: #27ae60;
+}
+.black{
+    transition: .5s;
+    color: black;
 }
 
 #tipo_escritor{
@@ -36,12 +53,7 @@
     color: #7f8c8d;
 }
 
-.green{
-    color: #27ae60;
-}
-.black{
-    color: black;
-}
+
 
 #teste{
     top: 0;
