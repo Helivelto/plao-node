@@ -76,7 +76,9 @@
             </span>
             <span> 
                 <span class="specific">noticias escritas por <%= usuario[0].nome_usuario %>: </span>
-                teste
+                <% for(let i = 0; i < noticia_usuario.length; i++){ %>
+                    <%= noticia_usuario[i].titulo %>
+                <% } %>
             </span>
 
         </div>

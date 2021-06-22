@@ -21,8 +21,8 @@ module.exports.usuario = (application, req, res) => {
     })
 
     usersDao.getNoticiasUser(id_usuario, (error, result) => {
-        // res.render({ noticia_usuario: result})
-        console.log(result)
+        res.render('usuarios/usuario', { noticia_usuario: result})
+        // console.log(result)
     })
 
 }
