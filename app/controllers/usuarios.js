@@ -14,15 +14,15 @@ module.exports.usuario = (application, req, res) => {
     const connection = application.config.dbConnection
     const usersDao = new application.app.models.UsersDAO(connection)
     const id_usuario = req.query
-    const nome_usuario = req.query
 
     usersDao.getUsuario(id_usuario, (error, result) => {
         res.render("usuarios/usuario", { usuario: result })
-        // console.log(error)
+        // console.log(id_usuario)
     })
-    usersDao.getUNoticiasUser(nome_usuario, (error, result) => {
+
+    usersDao.getNoticiasUser(id_usuario, (error, result) => {
+        // res.render({ noticia_usuario: result})
         console.log(result)
-        // {noticiasU: result}
     })
 
 }
