@@ -9,20 +9,21 @@ module.exports.usuarios = (application, req, res) => {
     
 }
 
-module.exports.usuario = (application, req, res) => {
+module.exports.usuario_noticia = (application, req, res) => {
 
     const connection = application.config.dbConnection
     const usersDao = new application.app.models.UsersDAO(connection)
-    const id_usuario = req.query
+    const obj_id_usuario = req.query
 
-    usersDao.getUsuario(id_usuario, (error, result) => {
-        res.render("usuarios/usuario", { usuario: result })
-        // console.log(id_usuario)
-    })
+    // usersDao.getUsuario(id_usuario, (error, result) => {
+    //     res.render("usuarios/usuario", { usuario: result })
+    //     // console.log(id_usuario)
+    // })
 
-    usersDao.getNoticiasUser(id_usuario, (error, result) => {
-        res.render('usuarios/usuario', { noticia_usuario: result})
+    usersDao.getNoticiasUser(obj_id_usuario, (error, result) => {
         // console.log(result)
+        res.render('usuarios/usuario_noticia', { noticia_usuario: result })
+        // res.send(result)
     })
 
 }
