@@ -56,28 +56,28 @@
         <div class="div_usuario">
             <span> 
                 <span class="specific">Id: #</span>
-                <%= usuario[0].id_usuario %>
+                <%= noticias[0].id_usuario %>
             </span>
             <span> 
                 <span class="specific">Nome de usuario: </span>
-                <%= usuario[0].nome_usuario %>
+                <%= noticias[0].nome_usuario %>
             </span>
             <span> 
                 <span class="specific">Email: </span>
-                <%= usuario[0].email_usuario %>
+                <%= noticias[0].email_usuario %>
             </span>
             <span> 
                 <span class="specific">Senha: </span>
-                <%= usuario[0].senha_usuario %>
+                <%= noticias[0].senha_usuario %>
             </span>
             <span> 
                 <span class="specific">Código de status: </span>
-                <%= usuario[0].cod_status_usuario.toUpperCase() %>
+                <%= noticias[0].cod_status_usuario.toUpperCase() %>
             </span>
             <span> 
-                <span class="specific">noticias escritas por <%= usuario[0].nome_usuario %>: </span>
-                <% for(let i = 0; i < noticia_usuario.length; i++){ %>
-                    <%= noticia_usuario[i].titulo %>
+                <span class="specific">noticias escritas por <%= noticias[0].nome_usuario %>: </span>
+                <% for(let i = 0; i < noticias.length; i++){ %>
+                    <%= noticias[i].titulo %>
                 <% } %>
             </span>
 

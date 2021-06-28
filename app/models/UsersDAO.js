@@ -12,8 +12,7 @@ UsersDAO.prototype.getUsuarios = function (callback) {
 
 UsersDAO.prototype.getNoticiasUser = function (obj_id_usuario, callback) {
     // this._connection.query(`select * from noticias where id_usuario = ${obj_id_usuario.id_usuario} `, callback)
-    this._connection.query(`select usuarios.*, noticias.* from noticias inner join usuarios on 
-    (noticias.id_usuario = usuarios.id_usuario) where id_ususario = ${obj_id_usuario.id_usuario} `, callback)
+    this._connection.query(`select usuarios.*, noticias.* from noticias inner join usuarios on (noticias.id_usuario = usuarios.id_usuario) where usuarios.id_usuario = ${obj_id_usuario.id_usuario} `, callback)
 }
 
 module.exports = () => {

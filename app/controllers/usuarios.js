@@ -22,7 +22,7 @@ module.exports.usuario_noticia = (application, req, res) => {
 
     usersDao.getNoticiasUser(obj_id_usuario, (error, result) => {
         // console.log(result)
-        res.render('usuarios/usuario_noticia', { noticia_usuario: result })
+        res.render('usuarios/usuario_noticia', { noticias: result })
         // res.send(result)
     })
 
