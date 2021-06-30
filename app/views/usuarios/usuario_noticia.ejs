@@ -15,7 +15,7 @@
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- incluindo css -->
-    <link href="css/style_user.css" rel="stylesheet">
+    <link href="/css/style_user.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 
@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <img src="images/logo.png" />
+                <img src="/images/logo.png" />
             </div>
 
 
@@ -54,30 +54,46 @@
 
     <div class="container">
         <div class="div_usuario">
+            
             <span> 
                 <span class="specific">Id: #</span>
                 <%= noticias[0].id_usuario %>
             </span>
+
+            <br>
+
             <span> 
                 <span class="specific">Nome de usuario: </span>
                 <%= noticias[0].nome_usuario %>
             </span>
+
+            <br>
+
             <span> 
                 <span class="specific">Email: </span>
                 <%= noticias[0].email_usuario %>
             </span>
+
+            <br>
+
             <span> 
                 <span class="specific">Senha: </span>
                 <%= noticias[0].senha_usuario %>
             </span>
+
+            <br>
+
             <span> 
                 <span class="specific">Código de status: </span>
                 <%= noticias[0].cod_status_usuario.toUpperCase() %>
             </span>
+
+            <br>
+
             <span> 
                 <span class="specific">noticias escritas por <%= noticias[0].nome_usuario %>: </span>
                 <% for(let i = 0; i < noticias.length; i++){ %>
-                    <%= noticias[i].titulo %>
+                  <a href="/noticia?id_noticia=<%= noticias[i].id_noticia %>"> <%= noticias[i].titulo %>, </a>
                 <% } %>
             </span>
 

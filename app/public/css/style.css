@@ -12,6 +12,7 @@ a:hover{
 	padding:15px;
 	margin-bottom:15px;
 	box-shadow: 1px 1px 2px #C3C3C3;
+	height: 80%;
 }
 
 .navbar{
@@ -34,7 +35,7 @@ a:hover{
 	display: block;
 }
 
-.noticia_resumo{
+.noticia_conteudo{
 	color:#333;
 	margin-right:10px;
 }
