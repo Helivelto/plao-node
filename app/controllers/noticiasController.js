@@ -22,11 +22,13 @@ module.exports.noticia = (application, req, res) => {
 
 };
 
+
 module.exports.formulario_inclusao_noticia = (application, req, res) => {
 
     res.render('noticias/form_noticias', {validacao: {}, noticia: {}})
     
 }
+
 
 module.exports.noticias_salvar = (application, req, res) => {
 

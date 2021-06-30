@@ -1,3 +1,4 @@
+
 module.exports.usuarios = (application, req, res) => {
 
     const connection = application.config.dbConnection
@@ -8,6 +9,7 @@ module.exports.usuarios = (application, req, res) => {
     })
     
 }
+
 
 module.exports.usuario_noticia = (application, req, res) => {
 
@@ -26,4 +28,14 @@ module.exports.usuario_noticia = (application, req, res) => {
         // res.send(result)
     })
 
+}
+
+
+module.exports.form_login = (application, req, res) => {
+    res.render('usuarios/form_login')
+}
+
+
+module.exports.home = (application, req, res) => {
+    res.render('usuarios/home')
 }

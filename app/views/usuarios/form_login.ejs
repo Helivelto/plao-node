@@ -40,7 +40,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     
-                    <img src="images/logo.png" />
+                    <img src="/images/logo.png" />
                 </div>
 
  
@@ -57,36 +57,20 @@
 
 
         <div class="container">
-
-            <% if(validacao.length > 0){ %>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-danger">
-                            <strong>Atenção!</strong>
-                            <ul>
-                                <% for(let i = 0; i < validacao.length; i++){ %>
-                                    <li><%= validacao[i].msg %></li>
-                                <% } %>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            <% } %>
         
             <div class="row">
                 <div class="col-md-12">
                     <form action="/usuario/login" method="post">
 
                         <div class="form-group">
-                            <label for="titulo">Email:</label>
+                            <label for="email_usuario">Email:</label>
                             <input type="text" class="form-control" id="email" name="email_usuario">
                         </div>
 
  
                         <div class="form-group">
-                            <label for="pwd">Senha:</label>
-                            <input type="text" class="form-control" id="senha" name="senha_usuario">
+                            <label for="senha_usuario">Senha:</label>
+                            <input type="password" class="form-control" id="senha" name="senha_usuario">
                         </div>
                         
 

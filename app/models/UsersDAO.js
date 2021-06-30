@@ -17,7 +17,7 @@ UsersDAO.prototype.getNoticiasUser = function (obj_id_usuario, callback) {
 
 UsersDAO.prototype.login = function(obj_usuario, callback){
     this._connection.query(`select * usuarios where usuarios where usuarios.email_usuario = ${obj_usuario.email_usuario}
-    and senha_usuario = ${obj_usuario.senha_usuario} `)
+    and senha_usuario = ${obj_usuario.senha_usuario} `, callback)
 }
 
 module.exports = () => {

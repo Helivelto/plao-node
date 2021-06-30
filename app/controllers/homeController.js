@@ -1,3 +1,4 @@
+
 module.exports.index = (application, req, res) => {
 
     const connection = application.config.dbConnection;

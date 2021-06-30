@@ -19,5 +19,4 @@ module.exports = (application) => {
         application.app.controllers.noticiasController.noticias_salvar(application, req, res)
     })
 
-
 }

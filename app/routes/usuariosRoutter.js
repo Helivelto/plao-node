@@ -1,3 +1,4 @@
+
 module.exports = (application) => {
     
     application.get('/usuarios', (req, res) => {
@@ -8,10 +9,13 @@ module.exports = (application) => {
         application.app.controllers.usuariosController.usuario_noticia(application, req, res)
     })
     application.get('/usuario/login', (req, res) => {
-        application.app.controllers.authController.login(application, req, res)
+        application.app.controllers.usuariosController.form_login(application, req, res)
     })
     application.post('/usuario/login', (req, res) => {
         application.app.controllers.authController.login(application, req, res)
+    })
+    application.get('/usuarios/home', (req, res) => {
+        application.app.controllers.usuariosController.home(application, req, res)
     })
 
 }
