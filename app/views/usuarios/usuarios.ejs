@@ -67,10 +67,6 @@
                 <% if(usuarios[i].tipo_usuario=='escritor' ){ %>
                     <div class="div_usuario">
                         <span> 
-                            <span class="specific">Id: #</span>
-                            <%= usuarios[i].id_usuario %>
-                        </span>
-                        <span> 
                             <span class="specific">Nome de usuario: </span>
                             <a href="usuario/noticias?id_usuario=<%= usuarios[i].id_usuario %>">
                             <%= usuarios[i].nome_usuario %>
@@ -83,10 +79,6 @@
                         <span> 
                             <span class="specific">Senha: </span>
                             <%= usuarios[i].senha_usuario %>
-                        </span>
-                        <span> 
-                            <span class="specific">Código de status: </span>
-                            <%= usuarios[i].cod_status_usuario.toUpperCase() %>
                         </span>
                     </div>
                 <% } %>
@@ -110,9 +102,7 @@
                         </span>
                         <span> 
                             <span class="specific">Nome de usuario: </span>
-                            <a href="usuario?id_usuario=<%= usuarios[i].id_usuario %>">
                                 <%= usuarios[i].nome_usuario %>
-                            </a>
                         </span>
                         <span> 
                             <span class="specific">Email: </span>

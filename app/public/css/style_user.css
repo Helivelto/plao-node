@@ -36,10 +36,9 @@
 #tipo_leitor{
     margin-top: 5vh;
 }
-.div_usuario{
+.div_usuario, .div_usuario_noticia{
     width: 80vw;
     height: 80%;
-    /* display: flex; */
     justify-self: center;
     justify-content: space-between;
     margin-left: auto;
@@ -49,6 +48,9 @@
 	padding:15px;
 	margin-bottom:15px;
 	box-shadow: 1px 1px 2px #C3C3C3;
+}
+.div_usuario{
+    display: flex;
 }
 .div_usuario span{
     margin: auto;

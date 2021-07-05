@@ -45,3 +45,7 @@ a:hover{
 	background:#FFF;
 	padding:20px;
 }
+.tempClass{
+	font-size: 2rem;
+	margin-left: 1em;
+}
