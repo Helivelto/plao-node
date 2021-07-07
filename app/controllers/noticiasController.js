@@ -46,10 +46,10 @@ module.exports.noticias_salvar = (application, req, res) => {
 
     const erros = req.validationErrors();
 
-    console.log(erros)
+    // console.log(erros)
 
     if(erros){
-        res.render('admin/form_noticias', { validacao: erros, noticia: noticia })
+        res.render('noticias/form_noticias', { validacao: erros, noticia: noticia })
         return;
     }
 

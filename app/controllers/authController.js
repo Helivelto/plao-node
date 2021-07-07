@@ -2,7 +2,7 @@
 module.exports.login = (application, req, res) => {
     const objUsuario = req.body;
 
-    console.log(req.sessionID)
+    // console.log(req.sessionID)
     // console.log(objUsuario)
 
     const connection = application.config.dbConnection
